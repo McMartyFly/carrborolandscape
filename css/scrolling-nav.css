@@ -5,15 +5,42 @@
  */
 
 header {
-  padding: 154px 0 100px;
+  padding: 0;
 }
 
 @media (min-width: 992px) {
   header {
-    padding: 156px 0 100px;
+    padding: 0;
   }
 }
 
 section {
-  padding: 150px 0;
+  padding: 20px 0;
+}
+
+#mainNav .container img {
+  width: 100%;
+}
+#mainNav .container .img-wrap {
+  display: block;
+}
+
+
+#carouselExampleSlidesOnly .carousel-inner .carousel-item img {
+  height: auto;
+  margin: 0 auto;
+  width: 500px;
+}
+#services ul .img {
+  list-style-type: none;
+}
+#services ul .img img {
+  width: 200px;
+}
+#awards .col {
+  text-align: center;
+}
+#awards img {
+  height: 100px;
+  width: 100px;
 }
