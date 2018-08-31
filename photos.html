@@ -17,9 +17,7 @@
     <link href="css/scrolling-nav.css" rel="stylesheet">
 
     <!-- lightbox css -->
-    <link href="css/scrolling-nav.css" rel="stylesheet">
-
-    <!-- lightbox js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
 
 
   </head>
@@ -65,8 +63,18 @@
       <div class="container">
         <div class="row">
           <div class="col mx-auto">
-            
 
+            <div class="row">
+            <a href="img/gallery/cllb1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="img/gallery/cllb1.jpg" class="img-fluid">
+            </a>
+            <a href="img/gallery/cllb2.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="img/gallery/cllb2.jpg" class="img-fluid">
+            </a>
+            <a href="img/gallery/cllb1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="img/gallery/cllb1.jpg" class="img-fluid">
+            </a>
+        </div>
           </div>
         </div>
       </div>
@@ -89,7 +97,16 @@
 
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js.map"></script>
+    <script>
+      $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+          event.preventDefault();
+          $(this).ekkoLightbox();
+      });
+    </script>
   </body>
 
 </html>
