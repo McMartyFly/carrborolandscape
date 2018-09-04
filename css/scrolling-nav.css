@@ -3,21 +3,33 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-scrolling-nav/blob/master/LICENSE)
  */
+ body {
+   /* background-color: #dcf9b9; */
+ }
 
 header {
   padding: 0;
 }
 
-@media (min-width: 992px) {
-  header {
-    padding: 0;
-  }
-}
 
 section {
   padding: 20px 0;
 }
-
+#mainNav {
+  background-color: #fff;
+}
+.contact {
+  background-color: #dcf9b9;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  color: #53934E;
+  height: 25px;
+  line-height: 24px;
+  position: fixed;
+  text-align: center;
+  top: 80px;
+  width: 100%;
+  z-index: 1020;
+}
 #mainNav .container img {
   width: 100%;
 }
@@ -25,11 +37,29 @@ section {
   display: block;
 }
 
+#navbarResponsive ul .nav-item .nav-link {
+  color: #53934E;
+  padding:20px;
+  text-decoration:none;
+  transition:all 0.3s;
+}
+#navbarResponsive ul .nav-item .nav-link:hover {
+  box-shadow:0px -5px 0 #53934E inset;
+  color: #2f542c;
+}
+
+#carouselExampleSlidesOnly {
+  background-color: #53934E;
+  padding: 125px 0 20px;
+}
 
 #carouselExampleSlidesOnly .carousel-inner .carousel-item img {
   height: auto;
   margin: 0 auto;
   width: 500px;
+}
+#about {
+  background-color: #dcf9b9;
 }
 #services ul .img {
   list-style-type: none;
@@ -47,3 +77,45 @@ section {
 
 
 /* LIGHTBOX CSS */
+#gallery {
+  padding: 120px 0 70px;
+}
+#gallery a {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+
+  text-align: center;
+  opacity: 0.8;
+
+}
+#gallery a:hover {
+  opacity: 1;
+}
+#gallery a .img-fluid {
+  height: 200px;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+/* PAYMENTS CSS */
+#form {
+  padding: 150px 0 50px;
+  text-align: center;
+}
+#form .paypal-button {
+  height: 30px;
+  width: auto;
+}
+#form h3 span {
+  font-weight: 300;
+}
+footer {
+  padding: 30px 0;
+}
+footer .copyright {
+  color: #fff;
+  text-align: center;
+}
