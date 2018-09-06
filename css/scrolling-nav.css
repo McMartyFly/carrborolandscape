@@ -52,6 +52,10 @@ section {
   width: 100%;
   z-index: 1020;
 }
+.contact .phone-call {
+  color: #53934E;
+  text-decoration: none;
+}
 #mainNav .container img {
   width: 100%;
 }
