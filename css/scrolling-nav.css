@@ -166,7 +166,7 @@ section {
 .quote #form form input {
   width: 50%;
 }
-.quote #form form input[type=submit] {
+.quote #form form input[type="submit"] {
   cursor: pointer;
   width: auto;
 }
