@@ -16,9 +16,12 @@
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
 
+
+    <!-- signup form links -->
+    <script language="JavaScript" src="/scripts/gen_validatorv31.js" type="text/javascript"></script>
   </head>
 
-  <body id="page-top">
+  <body id="page-top" class="quote">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -53,18 +56,40 @@
       Wright Brothers' Landscaping Service &#183; Carrboro, NC 27510 &#183; 919.260.1865
     </div>
 
-    <header class="bg-primary text-white">
+    <header class="quote bg-primary">
+      <h1>Landscaping and Tree Service Consultation Request</h1>
+      <p>We are happy to provide you with a consultation and a quote for any work needed.<br />Our consultation fee starts at only $75 for up to one hour.<br /> The fee will be credited toward any work that is done.<br /><br />Please complete the form below and we will contact you regarding scheduling and payment for your consultation.</p>
     </header>
 
-    <section id="form">
-      FORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HERE
-      FORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HERE
-      FORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HERE
-      FORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HERE
-      FORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HERE
-      FORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HERE
-      FORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HERE
-      FORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HEREFORM GOES HERE
+    <section id="form" class="quote">
+      <!-- Start code for the form-->
+      <form method="post" name="myemailform" action="form-to-email.php">
+      	<p>
+      		<label for='name'>Enter Name: </label><br>
+      		<input type="text" name="name">
+      	</p>
+      	<p>
+      		<label for='email'>Enter Email Address:</label><br>
+      		<input type="text" name="email">
+      	</p>
+      	<p>
+      		<label for='message'>Enter Message:</label> <br>
+      		<textarea name="message"></textarea>
+      	</p>
+      	<input type="submit" name='submit' value="submit">
+      </form>
+      <script language="JavaScript">
+      // Code for validating the form
+      // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+      // for details
+      var frmvalidator  = new Validator("myemailform");
+      frmvalidator.addValidation("name","req","Please provide your name");
+      frmvalidator.addValidation("email","req","Please provide your email");
+      frmvalidator.addValidation("email","email","Please enter a valid email address");
+      </script>
+      <!-- <p>
+        <a href='http://www.html-form-guide.com/email-form/php-form-to-email.html'>PHP form to email article page</a>
+      </p> -->
     </section>
 
     <!-- Footer -->

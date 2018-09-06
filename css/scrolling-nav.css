@@ -10,8 +10,30 @@
 header {
   padding: 0;
 }
-
-
+header.quote {
+  background-color: #53934E !important;
+  color: #fff;
+  padding: 120px 0 20px;
+  text-align: center;
+}
+header.hero {
+  background: url(../img/meadow-transparency.jpg) no-repeat center center;
+  color: #53934E;
+  -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+  height: 300px;
+  padding: 170px 0 120px;
+  width: 100%;
+}
+header.hero h1, header.hero h2 {
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+}
+/* header.slider {
+  background: url(../img/meadow-transparency.jpg) no-repeat center center;
+  background-color: rgba(255,255,255,0);
+} */
 section {
   padding: 20px 0;
 }
@@ -36,7 +58,6 @@ section {
 #mainNav .container .img-wrap {
   display: block;
 }
-
 #navbarResponsive ul .nav-item .nav-link {
   color: #53934E;
   padding:20px;
@@ -49,7 +70,7 @@ section {
 }
 
 #carouselExampleSlidesOnly {
-  background-color: #53934E;
+  /* background-color: #53934E; */
   padding: 125px 0 20px;
 }
 
@@ -74,11 +95,22 @@ section {
   height: 100px;
   width: 100px;
 }
+#awards .boch {
+  width: 70px;
+}
+#awards .ncnla {
+  width: 220px;
+}
 
 
 /* LIGHTBOX CSS */
 #gallery {
   padding: 120px 0 70px;
+}
+#gallery h3 {
+  color: #53934E;
+  margin-bottom: 20px;
+  text-align: center;
 }
 #gallery a {
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -87,6 +119,7 @@ section {
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 
+  color: #000;
   text-align: center;
   opacity: 0.8;
 
@@ -96,8 +129,14 @@ section {
 }
 #gallery a .img-fluid {
   height: 200px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   width: 300px;
+}
+#gallery a:hover {
+  text-decoration: none;
+}
+#gallery a .thumb-caption {
+  margin-bottom: 30px;
 }
 
 /* PAYMENTS CSS */
@@ -111,6 +150,29 @@ section {
 }
 #form h3 span {
   font-weight: 300;
+}
+.quote #form {
+  padding: 0;
+}
+.quote #form form {
+  background: url(../img/tree-bg3.png) no-repeat center center;
+  background-size: 90% 120%;
+  border: 15px solid #53934E;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px 0;
+  width: 50%;
+}
+.quote #form form input {
+  width: 50%;
+}
+.quote #form form input[type=submit] {
+  cursor: pointer;
+  width: auto;
+}
+.quote #form form textarea {
+  resize: none;
+  width: 50%;
 }
 footer {
   padding: 30px 0;
