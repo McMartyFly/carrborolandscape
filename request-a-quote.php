@@ -52,7 +52,7 @@
   <body id="page-top" class="quote">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="img-wrap" href="/carrborolandscape/">
           <img src="img/wrightBrothersLogo.jpg"/>

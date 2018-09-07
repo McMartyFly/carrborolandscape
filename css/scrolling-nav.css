@@ -169,7 +169,7 @@ section {
   width: 70%;
 }
 .quote #form p label {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 900;
 }
 .quote #form .form-f-name,
@@ -184,9 +184,11 @@ section {
   width: 32%;
 }
 .quote #form p input {
+  border: 1px solid gray;
   width: 100%;
 }
 .quote #form p textarea {
+  border: 1px solid gray;
   resize: none;
   width: 100%;
 }
@@ -212,10 +214,70 @@ section {
   font-weight: 900;
   text-align: center;
 }
+.navbar-light .navbar-toggler {
+  border-color: #53934E;
+  margin: 5px 0 0;
+  width: 100%;
+}
 footer {
   padding: 30px 0;
 }
 footer .copyright {
   color: #fff;
   text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 991px) {
+    .contact {
+      top: 103px;
+    }
+    header.hero {
+      padding: 179px 0 120px;
+    }
+}
+@media screen and (max-width: 927px) {
+    .contact {
+      top: 103px;
+    }
+    header.hero {
+      padding: 148px 0 120px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .contact {
+      top: 92px;
+    }
+    #services .col {
+      flex-basis: auto;
+      width: 100% !important;
+    }
+}
+@media screen and (max-width: 561px) {
+    .contact {
+      height: 50px;
+      top: 85px;
+    }
+    .img-wrap {
+      margin: 0 auto;
+    }
+    #mainNav .container img {
+      width: 350px;
+    }
+    header.quote {
+      padding: 160px 0 20px;
+    }
+}
+@media screen and (max-width: 543px) {
+    .contact {
+      height: 50px;
+    }
+}
+@media screen and (max-width: 513px) {
+    .contact {
+      height: 50px;
+    }
+    header.hero h1 {
+      font-size: 40px;
+    }
 }
