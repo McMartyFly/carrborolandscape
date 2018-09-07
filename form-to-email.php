@@ -7,14 +7,15 @@ if(!isset($_POST['submit']))
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
 $visitor_email = $_POST['email'];
-$referral = $_POST['referral'];
+$phone = $_POST['phone'];
 $address_first = $_POST['address_first'];
 $address_second = $_POST['address_second'];
 $address_city = $_POST['address_city'];
 $address_state = $_POST['address_state'];
 $address_zip = $_POST['address_zip'];
-$phone = $_POST['phone'];
+$referral = $_POST['referral'];
 $services = $_POST['services'];
+
 $time = $_POST['time'];
 
 if (empty($first_name)){
@@ -33,14 +34,14 @@ if (empty($phone)){
 
 //Validate first
 if($first_name == "error" || $last_name == "error" || $visitor_email == "error" || $phone == "error"){
-	header("Location: request-a-quote.php?firstname=$first_name&lastname=$last_name&email=$visitor_email&phone=$phone#form-anchor");
+	header("Location: request-a-quote.php?time=$time&services=$services&referral=$referral&addresszip=$address_zip&addressstate=$address_state&addresscity=$address_city&addresssecond=$address_second&addressfirst=$address_first&firstname=$first_name&lastname=$last_name&email=$visitor_email&phone=$phone#form-anchor");
   // echo "First Name, Last Name and Email are mandatory!";
   exit;
 } elseif(!filter_var($visitor_email, FILTER_VALIDATE_EMAIL)) {
-	header("Location: request-a-quote.php?firstname=$first_name&lastname=$last_name&email=$visitor_email&phone=$phone&emailvalidate=false#form-anchor");
+	header("Location: request-a-quote.php?time=$time&services=$services&referral=$referral&addresszip=$address_zip&addressstate=$address_state&addresscity=$address_city&addresssecond=$address_second&addressfirst=$address_first&firstname=$first_name&lastname=$last_name&email=$visitor_email&phone=$phone&emailvalidate=false#form-anchor");
 	exit;
 } elseif(!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $phone)) {
-	header("Location: request-a-quote.php?firstname=$first_name&lastname=$last_name&email=$visitor_email&phone=$phone&phonevalidate=false#form-anchor");
+	header("Location: request-a-quote.php?time=$time&services=$services&referral=$referral&addresszip=$address_zip&addressstate=$address_state&addresscity=$address_city&addresssecond=$address_second&addressfirst=$address_first&firstname=$first_name&lastname=$last_name&email=$visitor_email&phone=$phone&phonevalidate=false#form-anchor");
 	exit;
 }
 
