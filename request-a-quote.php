@@ -105,17 +105,17 @@
       <!-- Start code for the form-->
       <form method="post" name="myemailform" action="form-to-email.php">
       	<p class="form-f-name">
-      		<label for='first_name'>Enter First Name:<span class="req"> (required)</span> </label><br/>
+      		<label for='first_name'>First Name:<span class="req"> (required)</span> </label><br/>
 
       		<input type="text" name="first_name" placeholder="First Name" value="<?php if($firstname_error != "error") echo htmlentities($firstname_error); ?>">
       	</p>
         <p class="form-l-name">
-      		<label for='last_name'>Enter Last Name:<span class="req"> (required)</span> </label><br/>
+      		<label for='last_name'>Last Name:<span class="req"> (required)</span> </label><br/>
 
       		<input type="text" name="last_name" placeholder="Last Name" value="<?php if($lastname_error != "error") echo htmlentities($lastname_error); ?>">
       	</p>
       	<p class="form-email">
-      		<label for='email'>Enter Email Address:<span class="req"> (required)</span></label><br/>
+      		<label for='email'>Email Address:<span class="req"> (required)</span></label><br/>
 
       		<input type="text" name="email" placeholder="me@myemail.com" value="<?php if($email_error != "error") echo htmlentities($email_error); ?>">
       	</p>
@@ -156,7 +156,7 @@
       		<label for='time'>What is the best day/time to contact you?</label> <br>
       		<textarea name="time"><?php if(isset($time)) echo htmlentities($time); ?></textarea>
       	</p>
-      	<input type="submit" name='submit' value="submit">
+      	<input type="submit" name='submit' value="I'm Ready For Landscaping!">
       </form>
       <script language="JavaScript">
       // Code for validating the form

@@ -157,6 +157,43 @@ section {
 }
 .quote #form {
   padding: 0;
+  text-align: left;
+}
+.quote #form form {
+  background: url(../img/tree-bg3.png) no-repeat center center;
+  background-size: 90% 120%;
+  border: 15px solid #53934E;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px 10px;
+  width: 70%;
+}
+.quote #form p label {
+  font-size: 12px;
+  font-weight: 900;
+}
+.quote #form .form-f-name,
+.quote #form .form-l-name {
+  display: inline-block;
+  width: 49%;
+}
+.quote #form .form-city,
+.quote #form .form-state,
+.quote #form .form-zip {
+  display: inline-block;
+  width: 32%;
+}
+.quote #form p input {
+  width: 100%;
+}
+.quote #form p textarea {
+  resize: none;
+  width: 100%;
+}
+.quote #form .form-referral,
+.quote #form .form-services {
+  display: inline-block;
+  width: 49%;
 }
 .quote #form .form-error {
   color: red;
@@ -165,25 +202,9 @@ section {
   color: red;
   font-size: 10px;
 }
-.quote #form form {
-  background: url(../img/tree-bg3.png) no-repeat center center;
-  background-size: 90% 120%;
-  border: 15px solid #53934E;
-  border-radius: 10px;
-  margin: 20px auto;
-  padding: 20px 0;
-  width: 50%;
-}
-.quote #form form input {
-  width: 50%;
-}
 .quote #form form input[type="submit"] {
   cursor: pointer;
   width: auto;
-}
-.quote #form form textarea {
-  resize: none;
-  width: 50%;
 }
 footer {
   padding: 30px 0;

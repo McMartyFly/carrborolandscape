@@ -34,14 +34,14 @@ if (empty($phone)){
 
 //Validate first
 if($first_name == "error" || $last_name == "error" || $visitor_email == "error" || $phone == "error"){
-	header("Location: request-a-quote.php?time=$time&services=$services&referral=$referral&addresszip=$address_zip&addressstate=$address_state&addresscity=$address_city&addresssecond=$address_second&addressfirst=$address_first&firstname=$first_name&lastname=$last_name&email=$visitor_email&phone=$phone#form-anchor");
+	header("Location: request-a-quote.php?time=$time&services=$services&referral=$referral&addresszip=$address_zip&addressstate=$address_state&addresscity=$address_city&addresssecond=$address_second&addressfirst=$address_first&firstname=$first_name&lastname=$last_name&email=$visitor_email&phone=$phone");
   // echo "First Name, Last Name and Email are mandatory!";
   exit;
 } elseif(!filter_var($visitor_email, FILTER_VALIDATE_EMAIL)) {
-	header("Location: request-a-quote.php?time=$time&services=$services&referral=$referral&addresszip=$address_zip&addressstate=$address_state&addresscity=$address_city&addresssecond=$address_second&addressfirst=$address_first&firstname=$first_name&lastname=$last_name&email=$visitor_email&phone=$phone&emailvalidate=false#form-anchor");
+	header("Location: request-a-quote.php?time=$time&services=$services&referral=$referral&addresszip=$address_zip&addressstate=$address_state&addresscity=$address_city&addresssecond=$address_second&addressfirst=$address_first&firstname=$first_name&lastname=$last_name&email=$visitor_email&phone=$phone&emailvalidate=false");
 	exit;
 } elseif(!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $phone)) {
-	header("Location: request-a-quote.php?time=$time&services=$services&referral=$referral&addresszip=$address_zip&addressstate=$address_state&addresscity=$address_city&addresssecond=$address_second&addressfirst=$address_first&firstname=$first_name&lastname=$last_name&email=$visitor_email&phone=$phone&phonevalidate=false#form-anchor");
+	header("Location: request-a-quote.php?time=$time&services=$services&referral=$referral&addresszip=$address_zip&addressstate=$address_state&addresscity=$address_city&addresssecond=$address_second&addressfirst=$address_first&firstname=$first_name&lastname=$last_name&email=$visitor_email&phone=$phone&phonevalidate=false");
 	exit;
 }
 
@@ -55,17 +55,15 @@ if(IsInjected($visitor_email))
 $email_from = $visitor_email;
 $email_subject = "$first_name $last_name: Quote Request";
 $email_body =
-		"You have received a new message from the user $first_name $last_name.\n".
-		"Customer Address:\n $address_first\n$address_second\n$address_city, $address_state $address_zip".
-		"Phone: $phone\n".
-		"Referred Through:\n $referral\n".
+		"CUSTOMER: $first_name $last_name.\n".
+		"CUSTOMER ADDRESS:\n $address_first\n$address_second\n$address_city, $address_state $address_zip\n".
+		"PHONE: $phone\n".
+		"REFERRAL METHOD:\n $referral\n".
+		"REQUESTED SERVICES:\n $services";
 
 $to = "salar.antinori@gmail.com";//<== update the email address
 $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email \r\n";
-
-var_dump($email_body);
-exit;
 
 //Send the email!
 mail($to,$email_subject,$email_body,$headers);
