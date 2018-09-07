@@ -88,19 +88,21 @@
       <h1>Landscaping and Tree Service Consultation Request</h1>
       <p>We are happy to provide you with a consultation and a quote for any work needed.<br />Our consultation fee starts at only $75 for up to one hour.<br /> The fee will be credited toward any work that is done.<br /><br />Please complete the form below and we will contact you regarding scheduling and payment for your consultation.</p>
     </header>
-    <a id="form-anchor"></a>
-    <?php if ($firstname_error == "error"): ?>
-      <span class="form-error">Please Enter Your First Name</span><br/>
-    <?php endif ?>
-    <?php if ($lastname_error == "error"): ?>
-      <span class="form-error">Please Enter Your Last Name</span><br/>
-    <?php endif ?>
-    <?php if ($email_error == "error" || $email_validate == "false"): ?>
-      <span class="form-error">Please Enter a Valid Email</span><br/>
-    <?php endif ?>
-    <?php if ($phone_error == "error" || $phone_validate == "false"): ?>
-      <span class="form-error">Please Enter A Valid Phone #</span><br/>
-    <?php endif ?>
+    <div class="error-wrap">
+      <?php if ($firstname_error == "error"): ?>
+        <span class="form-error">Please Enter Your First Name</span><br/>
+      <?php endif ?>
+      <?php if ($lastname_error == "error"): ?>
+        <span class="form-error">Please Enter Your Last Name</span><br/>
+      <?php endif ?>
+      <?php if ($email_error == "error" || $email_validate == "false"): ?>
+        <span class="form-error">Please Enter a Valid Email</span><br/>
+      <?php endif ?>
+      <?php if ($phone_error == "error" || $phone_validate == "false"): ?>
+        <span class="form-error">Please Enter A Valid Phone #</span><br/>
+      <?php endif ?>
+    </div>
+
     <section id="form" class="quote">
       <!-- Start code for the form-->
       <form method="post" name="myemailform" action="form-to-email.php">
