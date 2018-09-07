@@ -158,6 +158,13 @@ section {
 .quote #form {
   padding: 0;
 }
+.quote #form .form-error {
+  color: red;
+}
+.quote #form .req {
+  color: red;
+  font-size: 10px;
+}
 .quote #form form {
   background: url(../img/tree-bg3.png) no-repeat center center;
   background-size: 90% 120%;

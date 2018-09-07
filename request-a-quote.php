@@ -1,3 +1,17 @@
+<?php
+  $firstname_error = $_GET['firstname'];
+  $lastname_error = $_GET['lastname'];
+  $email_error = $_GET['email'];
+  $phone_error = $_GET['phone'];
+
+  if(isset($_GET['emailvalidate'])){
+    $email_validate = $_GET['emailvalidate'];
+  }
+  if(isset($_GET['phonevalidate'])){
+    $phone_validate = $_GET['phonevalidate'];
+  }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +58,7 @@
               <a class="nav-link" href="/carrborolandscape/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="request-a-quote.html">Quotes</a>
+              <a class="nav-link" href="request-a-quote.php">Quotes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="photos.html">Photos</a>
@@ -65,21 +79,70 @@
       <h1>Landscaping and Tree Service Consultation Request</h1>
       <p>We are happy to provide you with a consultation and a quote for any work needed.<br />Our consultation fee starts at only $75 for up to one hour.<br /> The fee will be credited toward any work that is done.<br /><br />Please complete the form below and we will contact you regarding scheduling and payment for your consultation.</p>
     </header>
+    <a id="form-anchor"></a>
 
     <section id="form" class="quote">
       <!-- Start code for the form-->
       <form method="post" name="myemailform" action="form-to-email.php">
-      	<p>
-      		<label for='name'>Enter Name: </label><br>
-      		<input type="text" name="name">
+      	<p class="form-f-name">
+      		<label for='first_name'>Enter First Name:<span class="req"> (required)</span> </label><br/>
+          <?php if ($firstname_error == "error"): ?>
+            <span class="form-error">Please Enter Your First Name</span><br/>
+          <?php endif ?>
+      		<input type="text" name="first_name" placeholder="First Name" value="<?php if($firstname_error != "error") echo htmlentities($firstname_error); ?>">
       	</p>
-      	<p>
-      		<label for='email'>Enter Email Address:</label><br>
-      		<input type="text" name="email">
+        <p class="form-l-name">
+      		<label for='last_name'>Enter Last Name:<span class="req"> (required)</span> </label><br/>
+          <?php if ($lastname_error == "error"): ?>
+            <span class="form-error">Please Enter Your Last Name</span><br/>
+          <?php endif ?>
+      		<input type="text" name="last_name" placeholder="Last Name" value="<?php if($lastname_error != "error") echo htmlentities($lastname_error); ?>">
       	</p>
-      	<p>
-      		<label for='message'>Enter Message:</label> <br>
-      		<textarea name="message"></textarea>
+      	<p class="form-email">
+      		<label for='email'>Enter Email Address:<span class="req"> (required)</span></label><br/>
+          <?php if ($email_error == "error" || $email_validate == "false"): ?>
+            <span class="form-error">Please Enter a Valid Email</span><br/>
+          <?php endif ?>
+      		<input type="text" name="email" placeholder="me@myemail.com" value="<?php if($email_error != "error") echo htmlentities($email_error); ?>">
+      	</p>
+        <p class="form-address-first">
+      		<label for='address_first'>Address Line 1: </label><br/>
+      		<input type="text" name="address_first">
+      	</p>
+        <p class="form-address-second">
+      		<label for='address_second'>Address Line 2:</label><br/>
+      		<input type="text" name="address_second">
+      	</p>
+        <p class="form-city">
+      		<label for='address_city'>City:</label><br/>
+      		<input type="text" name="address_city">
+      	</p>
+        <p class="form-state">
+      		<label for='address_state'>State:</label><br/>
+      		<input type="text" name="address_state">
+      	</p>
+        <p class="form-zip">
+      		<label for='address_zip'>Postal/Zip:</label><br/>
+      		<input type="text" name="address_zip">
+      	</p>
+        <p class="form-phone">
+          <label for='phone'>Phone # (123-456-7890):<span class="req"> (required)</span></label><br/>
+          <?php if ($phone_error == "error" || $phone_validate == "false"): ?>
+            <span class="form-error">Please Enter A Valid Phone #</span><br/>
+          <?php endif ?>
+      		<input type="tel" name="phone" placeholder="123-456-7890" value="<?php if($phone_error != "error") echo htmlentities($phone_error); ?>">
+      	</p>
+      	<p class="form-referral">
+      		<label for='referral'>How did you hear about our service?</label> <br>
+      		<textarea name="referral"></textarea>
+      	</p>
+        <p class="form-services">
+      		<label for='services'>What type of service are you interested in? (Please describe) </label> <br>
+      		<textarea name="services"></textarea>
+      	</p>
+        <p class="form-time">
+      		<label for='time'>What is the best day/time to contact you?</label> <br>
+      		<textarea name="time"></textarea>
       	</p>
       	<input type="submit" name='submit' value="submit">
       </form>
