@@ -61,7 +61,7 @@ $email_body =
 		"REFERRAL METHOD:\n $referral\n".
 		"REQUESTED SERVICES:\n $services";
 
-$to = "salar.antinori@gmail.com";//<== update the email address
+$to = "david.carter@ideasenvy.com";//<== update the email address
 $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email \r\n";
 
